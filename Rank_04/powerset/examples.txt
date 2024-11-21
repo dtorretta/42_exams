@@ -6,6 +6,7 @@
 1 2
 1 0 2
 
+********(complex are not working)********
 ./powerset 12 5 2 1 8 4 3 7 11
 8 4 
 1 11
@@ -16,7 +17,8 @@
 5 4 3
 5 2 14
 
-./powerset 0 1 -1
+********(it gives me segfault)********
+./powerset 0 1 -1 
 1 -1
 
 ./powerset 7 3 8 2
