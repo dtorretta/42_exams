@@ -24,7 +24,7 @@ void findSubsets(int* arr, int size, int target, int* subset, int subsetSize, in
         j = 0;
         while (j < subsetSize) 
         {
-            printf("final: %d ", subset[j]);
+            printf("%d ", subset[j]);
             j++;
         }
         printf("\n");
@@ -41,7 +41,7 @@ void findSubsets(int* arr, int size, int target, int* subset, int subsetSize, in
 int main(int argc, char **argv) 
 {
     int target = atoi(argv[1]);
-    int size = argc - 2; //not including the target
+    int size = argc - 2; //not includes the target
     int i = -1;
     
     int *subset = malloc(size * sizeof(int));
