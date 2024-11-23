@@ -12,24 +12,12 @@ void findSubsets(int* arr, int size, int target, int* subset, int subsetSize, in
     int i = start;
     int sum = 0;
     int j = 0;
-    
-    
-    int x = -1;
-    printf("subset: ");
-     while (++x < size) 
-        printf("%d ", subset[x]);
-    printf(" subsetSize: %d ", subsetSize);
-    printf(" start: %d ", start);
-    
-    
+      
     while (j < subsetSize) 
     {
         sum += subset[j];
         j++;
     }
-    
-    printf(" SUM: %d ", sum);
-    printf("\n");
     
     if (sum == target) 
     {
