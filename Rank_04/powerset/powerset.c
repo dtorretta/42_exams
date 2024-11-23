@@ -2,11 +2,11 @@
 #include <stdlib.h>
 
 /*
-Backtracking es una técnica donde el programa explora todas las posibilidades 
-para resolver un problema y retrocede para probar opciones diferentes cuando llega a un callejón sin salida.
-
-para el ejemplo ()./powerset 3 1 0 2 4 5 3) el programa intenta construir todas las combinaciones posibles de números (subsets) 
-y verificar si su suma es igual al objetivo (3). Si un camino no sirve, retrocede y prueba otra combinación.
+Backtracking is a technique where the program explores all possibilities to solve a problem 
+and backtracks to try different options when it reaches a dead end.
+For the example `./powerset 3 1 0 2 4 5 3`, the program attempts to construct all possible 
+combinations of numbers (subsets) and checks if their sum equals the target (3). 
+If a path does not work, it backtracks and tries another combination.
 */
 void findSubsets(int* arr, int size, int target, int* subset, int subsetSize, int start) {
     int i = start;
