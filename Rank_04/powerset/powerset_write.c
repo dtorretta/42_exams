@@ -43,7 +43,10 @@ void findSubsets(int* arr, int size, int target, int* subset, int subsetSize, in
         j++;
     }
 
-    if (sum == target) {
+    // Without '&& subsetSize > 0', while testing `./powerset 0 1 -1`, it will print an empty line before the correct output.
+    // I don't remember if we were meant to print this empty line before the correct output in the exam or not.
+    if (sum == target && subsetSize > 0) 
+    {
         j = 0;
         while (j < subsetSize) 
         {
@@ -54,7 +57,8 @@ void findSubsets(int* arr, int size, int target, int* subset, int subsetSize, in
         write(STDOUT_FILENO, "\n", 1);
     }
 
-    while (i < size) {
+    while (i < size) 
+    {
         subset[subsetSize] = arr[i];
         findSubsets(arr, size, target, subset, subsetSize + 1, i + 1);
         i++;
