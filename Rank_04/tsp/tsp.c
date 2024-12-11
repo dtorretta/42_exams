@@ -37,8 +37,8 @@ float find_shortest (float *x, float *y, int len)
     
     start = 0; //punto de partida
     total_distance = 0;
-    //ai solo hay 2 ciudades, la ditancia total es ida y vuelta
-    if(start == len)
+    //si solo hay 2 ciudades, la ditancia total es ida y vuelta
+    if(start == len - 1)
     {
         total_distance = distance(x[0], y[0], x[1], y[1]);
         total_distance *= 2;
@@ -87,7 +87,7 @@ int main (int ac, char **av)
     float total_distance;
     
     i = 0;    
-    //dentro de x e y se van a almacenar todas las coordenadas
+    //dentro de 'x' e 'y' se van a almacenar todas las coordenadas
     while (fscanf(stdin, "%f, %f", &x[i], &y[i]) == 2)
     {
         i++;    
@@ -99,4 +99,4 @@ int main (int ac, char **av)
 }
 
 //cc -Wall -Wextra -Werror tsp.c -lm
-//AGREGAR AL COMPILADOR -LM 
+//add -LM to the cc
