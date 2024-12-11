@@ -86,3 +86,22 @@ int main (int ac, char **av)
         printf("%s\n", av[1]);
     return(0);
 }
+
+/*
+examples:
+
+./permutations a
+a
+
+./permutations ab
+ab
+ba
+
+./permutations abc
+abc
+acb
+bac
+bca
+cab
+cba
+*/
