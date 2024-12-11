@@ -36,7 +36,6 @@ float find_shortest (float *x, float *y, int len)
     int start;
     
     start = 0; //punto de partida
-    total_distance = 0;
     //si solo hay 2 ciudades, la ditancia total es ida y vuelta
     if(start == len - 1)
     {
