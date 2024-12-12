@@ -1,3 +1,30 @@
+/*
+permutations
+
+expected files: *.c *.h
+function allowed: puts, malloc, calloc, realloc, free, write
+
+write a program that will print all the permutations of a string given as an argument
+solutions must be given in an alphabetical order
+
+we will not try your program with duplicates. example: "abccd"
+
+./permutations a
+a
+
+./permutations ab
+ab
+ba
+
+./permutations abc
+abc
+acb
+bac
+bca
+cab
+cba
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -86,22 +113,3 @@ int main (int ac, char **av)
         printf("%s\n", av[1]);
     return(0);
 }
-
-/*
-examples:
-
-./permutations a
-a
-
-./permutations ab
-ab
-ba
-
-./permutations abc
-abc
-acb
-bac
-bca
-cab
-cba
-*/
