@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
+
 
 /*
 Backtracking is a technique where the program explores all possibilities to solve a problem 
@@ -8,7 +10,8 @@ For the example `./powerset 3 1 0 2 4 5 3`, the program attempts to construct al
 combinations of numbers (subsets) and checks if their sum equals the target (3). 
 If a path does not work, it backtracks and tries another combination.
 */
-void findSubsets(int* arr, int size, int target, int* subset, int subsetSize, int start) {
+void findSubsets(int* arr, int size, int target, int* subset, int subsetSize, int start) 
+{
     int i = start;
     int sum = 0;
     int j = 0;
